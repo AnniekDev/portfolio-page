@@ -1,0 +1,75 @@
+.effect__wrap .effect--position {
+  position: absolute;
+  z-index: 1;
+}
+
+.effect-1 {
+  width: 30px;
+  height: 30px;
+  border: 4px solid #41436a;
+  right: 10%;
+  bottom: 10%;
+  animation: spin 10s linear infinite;
+}
+
+.effect-2 {
+  left: 3%;
+  bottom: 20%;
+  width: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  animation: bounce 3s ease-in-out infinite;
+
+  div {
+    height: 3px;
+    width: 3px;
+    background-color: #f64668;
+    margin: 0 3px 8px;
+  }
+}
+
+.effect-3 {
+  height: 180px;
+  width: 180px;
+  border: 25px solid #984063;
+  border-radius: 50%;
+  left: 50%;
+  top: -120px;
+  animation: bounceLeft 3s ease infinite;
+}
+
+.effect-4 {
+  border-top: 30px solid transparent;
+  border-left: 30px solid #f64668;
+  left: 30%;
+  top: 20%;
+  animation: spin 15s linear infinite;
+
+  &:before {
+    content: "";
+    border-top: 30px solid transparent;
+    border-left: 30px solid #f64668;
+    left: -35px;
+    top: -25px;
+    opacity: 0.5;
+    position: absolute;
+  }
+}
+
+.effect-5 {
+  height: 50px;
+  width: 50px;
+  right: 10%;
+  top: 30%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 50%;
+  overflow: hidden;
+  animation: spin 20s linear infinite;
+
+  div {
+    width: 1px;
+    background-color: #fe9677;
+  }
+}

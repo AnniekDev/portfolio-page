@@ -1,0 +1,61 @@
+.header {
+  padding: 20px 15px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+
+  &__logo-link {
+    display: inline-block;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    color: $color-primary;
+    height: 40px;
+    width: 40px;
+    border: 2px solid $color-primary;
+    border-radius: 50%;
+    text-transform: uppercase;
+  }
+
+  &__hamburger-btn {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 30%;
+    transition: all 0.3 ease;
+
+    &:after {
+      border-radius: 30%;
+    }
+
+    span {
+      display: block;
+      height: 2px;
+      width: 16px;
+      background-color: $color-bg-black-900;
+      position: relative;
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color-bg-black-900;
+      }
+      &:before {
+        top: -6px;
+      }
+      &:after {
+        top: 6px;
+      }
+    }
+  }
+}
