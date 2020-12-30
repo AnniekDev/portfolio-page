@@ -1,0 +1,87 @@
+.about {
+  padding: 80px 0;
+  min-height: 100vh;
+
+  &__title {
+    padding: 0 15px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  h2 {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 700;
+    color: $color-text-black-900;
+    text-transform: uppercase;
+    margin: 0;
+
+    &::before {
+      content: attr(data-heading);
+      display: block;
+      font-size: 16px;
+      font-weight: 600;
+      color: $color-primary;
+    }
+  }
+
+  &__img {
+    flex: 0 0 40%;
+    max-width: 40%;
+    padding: 0 1px;
+  }
+
+  &__img-box {
+    padding: 15px;
+  }
+
+  &__info-text {
+    flex: 0 0 60%;
+    max-width: 60%;
+    padding: 0 15px;
+
+    p {
+      font-size: 16px;
+      line-height: 26px;
+      margin-bottom: 15px;
+      color: $color-text-black-600;
+    }
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  img {
+    width: 100%;
+    border: 10px solid transparent;
+  }
+
+  &__social-icon {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  &__social-links {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    font-size: 23px;
+    text-align: center;
+    line-height: 40px;
+    color: $color-text-black-600;
+    margin: 0 15px;
+    border-radius: 30%;
+    transition: all 0.3s ease;
+
+    &::after {
+      border-radius: 30%;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}

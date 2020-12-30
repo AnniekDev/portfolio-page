@@ -28,7 +28,9 @@ ul {
   padding: 0; }
 
 img {
-  vertical-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 100%; }
 
 .container {
@@ -58,6 +60,9 @@ img {
     transform: translatex(0); }
   50% {
     transform: translatex(15px); } }
+
+span {
+  font-weight: bold; }
 
 .justify-content-between {
   justify-content: space-between; }
@@ -89,7 +94,7 @@ img {
 .align-items-center {
   align-items: center; }
 
-.btn-about {
+.btn {
   padding: 10px 25px;
   font-size: 16px;
   font-weight: 500;
@@ -101,8 +106,10 @@ img {
   transition: all 0.3s ease;
   display: inline-block;
   margin-top: 30px; }
-  .btn-about:after {
+  .btn:after {
     border-radius: 5px; }
+  .btn--margin-right {
+    margin-right: 50px; }
 
 .effect__wrap .effect--position {
   position: absolute;
@@ -313,3 +320,64 @@ img {
   font-size: 15px;
   color: #666;
   transform: translateY(-50%) rotate(-90deg); }
+
+.about {
+  padding: 80px 0;
+  min-height: 100vh; }
+  .about__title {
+    padding: 0 15px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 60px; }
+  .about h2 {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+    margin: 0; }
+    .about h2::before {
+      content: attr(data-heading);
+      display: block;
+      font-size: 16px;
+      font-weight: 600;
+      color: #984063; }
+  .about__img {
+    flex: 0 0 40%;
+    max-width: 40%;
+    padding: 0 1px; }
+  .about__img-box {
+    padding: 15px; }
+  .about__info-text {
+    flex: 0 0 60%;
+    max-width: 60%;
+    padding: 0 15px; }
+    .about__info-text p {
+      font-size: 16px;
+      line-height: 26px;
+      margin-bottom: 15px;
+      color: #666; }
+    .about__info-text span {
+      font-weight: 600; }
+  .about img {
+    width: 100%;
+    border: 10px solid transparent; }
+  .about__social-icon {
+    margin-top: 20px;
+    text-align: center; }
+  .about__social-links {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    font-size: 23px;
+    text-align: center;
+    line-height: 40px;
+    color: #666;
+    margin: 0 15px;
+    border-radius: 30%;
+    transition: all 0.3s ease; }
+    .about__social-links::after {
+      border-radius: 30%; }
+    .about__social-links:hover {
+      color: #984063; }
