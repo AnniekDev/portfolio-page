@@ -381,3 +381,7 @@ span {
       border-radius: 30%; }
     .about__social-links:hover {
       color: #984063; }
+
+.portfolio {
+  padding: 80px 0 80px;
+  min-height: 100vh; }
