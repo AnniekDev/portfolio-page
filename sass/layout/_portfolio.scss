@@ -11,6 +11,7 @@
     flex: 0 0 100%;
     max-width: 100%;
     text-align: center;
+    margin-bottom: 20px;
 
     &-item {
       display: inline-block;
@@ -33,5 +34,53 @@
         opacity: 0.6;
       }
     }
+  }
+
+  &__item {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+
+    &-details {
+      display: none;
+    }
+
+    &-inner {
+      padding: 15px;
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    &-img {
+      position: relative;
+    }
+
+    img {
+      border-radius: 1px;
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+  /* &__view-project {
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 600;
+    color: $color-primary;
+    transition: all 0.3s ease;
+  }*/
+
+  &__button {
+    justify-content: center;
+    align-items: center;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px 0 0;
+    color: $color-text-black-700;
+    text-transform: capitalize;
   }
 }
