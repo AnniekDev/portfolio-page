@@ -387,6 +387,7 @@ span {
 .portfolio {
   padding: 80px 0 80px;
   min-height: 100vh;
+  position: relative;
   /* &__view-project {
     text-transform: capitalize;
     font-size: 16px;
@@ -432,13 +433,17 @@ span {
       width: 100%; }
     .portfolio__item-img {
       position: relative; }
+      .portfolio__item-img a {
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        max-width: 50%;
+        font-weight: 600; }
     .portfolio__item img {
       border-radius: 1px;
       width: 100%;
-      cursor: pointer; }
-  .portfolio__button {
-    justify-content: center;
-    align-items: center; }
+      cursor: pointer;
+      margin-bottom: 15px; }
   .portfolio p {
     font-size: 16px;
     font-weight: 600;

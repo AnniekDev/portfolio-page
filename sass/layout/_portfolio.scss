@@ -1,6 +1,7 @@
 .portfolio {
   padding: 80px 0 80px;
   min-height: 100vh;
+  position: relative;
 
   &__title {
     margin-bottom: 20px;
@@ -55,14 +56,24 @@
 
     &-img {
       position: relative;
+
+      a {
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        max-width: 50%;
+        font-weight: 600;
+      }
     }
 
     img {
       border-radius: 1px;
       width: 100%;
       cursor: pointer;
+      margin-bottom: 15px;
     }
   }
+
   /* &__view-project {
     text-transform: capitalize;
     font-size: 16px;
@@ -70,11 +81,6 @@
     color: $color-primary;
     transition: all 0.3s ease;
   }*/
-
-  &__button {
-    justify-content: center;
-    align-items: center;
-  }
 
   p {
     font-size: 16px;
