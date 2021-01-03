@@ -33,3 +33,10 @@
 .align-items-center {
   align-items: center;
 }
+
+.separator {
+  height: 2px;
+  width: 100%;
+  display: block;
+  background-color: $color-bg-black-100;
+}
