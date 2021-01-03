@@ -475,7 +475,8 @@ span {
     z-index: 1000;
     overflow-y: auto;
     opacity: 0;
-    visibility: hidden; }
+    visibility: hidden;
+    transition: all 0.35s ease-in; }
   .portfolio__pp-details {
     max-width: 1350px;
     width: 85%;
@@ -583,3 +584,14 @@ span {
     left: 20px; }
   .portfolio__pp-next {
     right: 20px; }
+
+.portfolio__item.hide {
+  display: none; }
+
+.portfolio__item.show {
+  display: block;
+  animation: fadeInTop 0.5s ease; }
+
+.portfolio__popup.open {
+  visibility: visible;
+  opacity: 1; }

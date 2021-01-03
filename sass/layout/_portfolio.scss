@@ -114,6 +114,7 @@
     overflow-y: auto;
     opacity: 0;
     visibility: hidden;
+    transition: all 0.35s ease-in;
   }
 
   &__pp-details {
@@ -269,4 +270,18 @@
       right: 20px;
     }
   }
+}
+
+.portfolio__item.hide {
+  display: none;
+}
+
+.portfolio__item.show {
+  display: block;
+  animation: fadeInTop 0.5s ease;
+}
+
+.portfolio__popup.open {
+  visibility: visible;
+  opacity: 1;
 }
