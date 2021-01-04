@@ -58,6 +58,15 @@
       &:hover {
         transform: scale(1.1);
       }
+
+      button {
+        text-align: center;
+        margin: 10px auto;
+        display: block;
+        max-width: 50%;
+        font-weight: 600;
+        border: 0;
+      }
     }
 
     &-img {
@@ -87,20 +96,13 @@
     }
   }
 
-  /* &__view-project {
-    text-transform: capitalize;
-    font-size: 16px;
-    font-weight: 600;
-    color: $color-primary;
-    transition: all 0.3s ease;
-  }*/
-
   p {
     font-size: 16px;
     font-weight: 600;
     margin: 10px 0 0;
     color: $color-text-black-700;
     text-transform: capitalize;
+    text-align: center;
   }
 
   &__popup {
@@ -111,10 +113,10 @@
     width: 100%;
     height: 100%;
     z-index: 1000;
-    overflow-y: auto;
+    overflow-y: scroll;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.35s ease-in;
+    transition: all 0.35s ease;
   }
 
   &__pp-details {
@@ -124,6 +126,7 @@
     max-height: 0;
     overflow: hidden;
     opacity: 0;
+    transition: all 0.5s ease;
 
     &-inner {
       padding: 30px 0;
@@ -185,6 +188,10 @@
       font-weight: 600;
       color: $color-text-black-600;
       font-size: 16px;
+
+      a {
+        color: $color-primary;
+      }
     }
     li:last-child {
       margin-bottom: 0;
@@ -243,31 +250,31 @@
     }
   }
 
-  &__pp {
-    &-prev,
-    &-next {
-      position: fixed;
-      top: 50%;
+  &__pp-loader {
+    position: fixed;
+    z-index: 1005;
+    margin: auto;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    opacity: 0;
+    visibility: hidden;
+
+    div {
       height: 40px;
       width: 40px;
-      cursor: pointer;
-      text-align: center;
-      font-size: 50px;
-      z-index: 1010;
-      color: $color-text-black-700;
-      transition: all 0.3s ease;
-
-      &:hover {
-        color: $color-primary;
-      }
+      border: 3px solid $color-primary;
+      animation: spin 4s linear infinite;
     }
 
-    &-prev {
-      left: 20px;
-    }
-
-    &-next {
-      right: 20px;
+    &.active {
+      opacity: 0.8;
+      visibility: visible;
     }
   }
 }
@@ -283,5 +290,9 @@
 
 .portfolio__popup.open {
   visibility: visible;
+  opacity: 1;
+}
+
+.portfolio__pp-details.active {
   opacity: 1;
 }

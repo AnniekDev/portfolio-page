@@ -25,3 +25,12 @@
     transform: translatex(15px);
   }
 }
+
+@keyframes bouncers {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100px);
+  }
+}

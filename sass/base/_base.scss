@@ -17,6 +17,10 @@ body {
   background-color: $color-bg-black-50;
 }
 
+body.hidden-scrolling {
+  overflow-y: hidden;
+}
+
 :before,
 :after {
   box-sizing: border-box;
