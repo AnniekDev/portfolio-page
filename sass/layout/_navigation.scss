@@ -76,3 +76,14 @@
   color: $color-text-black-600;
   transform: translateY(-50%) rotate(-90deg);
 }
+
+.section.hide {
+  display: none;
+}
+
+.navigation.open {
+  visibility: visible;
+  opacity: 1;
+  z-index: 999;
+  transition: all 0.3s ease-in;
+}

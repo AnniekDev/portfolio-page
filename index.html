@@ -33,17 +33,17 @@
         <div class="navigation__close-menu outer-shadow hover-in-shadow">&times;</div>
         <div class="navigation__list">
             <ul>
-                <li class="navigation__item"><a href="#" class="navigation__link inner-shadow active">home</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link outer-shadow hover-in-shadow">about</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link outer-shadow hover-in-shadow">portfolio</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link outer-shadow hover-in-shadow">contact</a></li>
+                <li class="navigation__item"><a href="#home" class="navigation__link inner-shadow active">home</a></li>
+                <li class="navigation__item"><a href="#about" class="navigation__link outer-shadow hover-in-shadow">about</a></li>
+                <li class="navigation__item"><a href="#portfolio" class="navigation__link outer-shadow hover-in-shadow">portfolio</a></li>
+               <!-- <li class="navigation__item"><a href="#contact" class="navigation__link outer-shadow hover-in-shadow">contact</a></li> -->
             </ul>
         </div>
         <p class="copyright-text">&copy; 2021 by Anniek</p>
     </nav>
 
 
-    <section class="home">
+    <section class="home section active" id="home">
         <!--effect wrap-->
         <div class="effect__wrap">
             <div class="effect--position effect-1">
@@ -103,7 +103,7 @@
                     <p>Hi!</p>
                     <h2>I'm Anniek</h2>
                     <h1>Web developer</h1>
-                    <a href="#" class="btn outer-shadow hover-in-shadow">More About Me</a>
+                    <a href="#about" class="btn outer-shadow hover-in-shadow">More About Me</a>
                 </div>
                 <div class="home__img">
                     <div class="home__img-box inner-shadow">
@@ -114,7 +114,7 @@
         </div>
     </section>
 
-    <section class="about">
+    <section class="about section" id="about">
         <div class="container">
             <div class="row">
                 <div class="about__title">
@@ -138,17 +138,17 @@
                     </p><p>Cupcake oat cake icing gingerbread brownie macaroon lollipop cake cotton candy.
                         Cookie sweet roll cotton candy chocolate bar. Candy canes bear claw biscuit chocolate bar cotton candy biscuit. Ice cream marshmallow tootsie roll carrot cake muffin sugar plum marzipan. Donut muffin dragée croissant carrot cake wafer. Oat cake wafer tootsie roll jujubes soufflé marzipan. Tart soufflé pudding. Cheesecake tart tiramisu. Cake oat cake toffee sugar plum fruitcake cake. Bear claw marshmallow donut jujubes chocolate cake liquorice jelly-o liquorice. Pastry fruitcake jelly beans bonbon. Brownie marzipan tootsie roll danish. Pastry sweet candy carrot cake chocolate cake bear claw. Powder cupcake candy canes. Bonbon sesame snaps cotton candy toffee bear claw.</p>
                     <a href="cv.pdf" class="btn btn--margin-right outer-shadow hover-in-shadow">Download CV</a>
-                    <a href="#" class="btn btn--margin-right outer-shadow hover-in-shadow">Hire me</a>
+                    <a href="#contact" class="btn btn--margin-right outer-shadow hover-in-shadow">Hire me</a>
                     </div>
             </div>
         </div>
     </section>
    
-    <section class="portfolio">
+    <section class="portfolio section" id="portfolio">
         <div class="container">
             <div class="row">
                 <div class="about__title">
-                    <h2 data-heading="portfolio">Latest work</h2>
+                    <h2 data-heading="portfolio">My Work</h2>
                 </div>
             </div>
             <div class="row">
@@ -497,7 +497,9 @@
     </div>
 
 
-    <!--<script src="https://unpkg.com/scrollreveal"></script> -->
+
+
+        <!--<script src="https://unpkg.com/scrollreveal"></script> -->
     <script src="js/main.js"></script>
 </body>
 </html>

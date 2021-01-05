@@ -9,6 +9,18 @@
   font-family: "Nunito", sans-serif;
   font-weight: 400; }
 
+/* override variables for dark them */
+body.dark {
+  background-color: #fff;
+  background-color: #353535;
+  background-color: #2b2c2f;
+  color: #fff;
+  color: #fff;
+  color: #bbb;
+  box-shadow: 3px 3px 3px #222327, -3px -3px 3px #363636;
+  box-shadow: 0 0 0 #222327, 0 0 0 #363636;
+  box-shadow: inset 3px 3px 3px #222327, inset -3px -3px 3px #363636; }
+
 body {
   font-size: 16px;
   line-height: 1.5;
@@ -69,6 +81,12 @@ img {
     transform: translateY(0); }
   to {
     transform: translateY(-100px); } }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
 
 span {
   font-weight: bold; }
@@ -338,6 +356,15 @@ span {
   color: #666;
   transform: translateY(-50%) rotate(-90deg); }
 
+.section.hide {
+  display: none; }
+
+.navigation.open {
+  visibility: visible;
+  opacity: 1;
+  z-index: 999;
+  transition: all 0.3s ease-in; }
+
 .about {
   padding: 80px 0;
   min-height: 100vh; }
@@ -468,6 +495,19 @@ span {
       width: 100%;
       cursor: pointer;
       margin-bottom: 15px; }
+  .portfolio h2 {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+    margin: 0; }
+    .portfolio h2::before {
+      content: attr(data-heading);
+      display: block;
+      font-size: 16px;
+      font-weight: 600;
+      color: #984063; }
   .portfolio p {
     font-size: 16px;
     font-weight: 600;

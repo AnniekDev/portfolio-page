@@ -1,3 +1,50 @@
+
+const hamburgerButton = document.querySelector(".header__hamburger-btn")
+navMenu = document.querySelector(".navigation")
+closeNavButton = document.querySelector(".navigation__close-menu")
+
+
+function showNavMenu(){
+    navMenu.classList.add("open");
+    bodyScrollingToggle();
+}
+
+function hideNavMenu(){
+    navMenu.classList.remove("open");
+    bodyScrollingToggle();
+}
+
+hamburgerButton.addEventListener("click", showNavMenu);
+closeNavButton.addEventListener("click", hideNavMenu);
+
+document.addEventListener("click", (event) => {
+   if(event.target.classList.contains("navigation__link")){
+       /*make sure event.target.hash has a value before overriding default*/
+        if(event.target.hash !==""){
+           /*prevent default anchor click*/
+            event.preventDefault();
+            const hash = event.target.hash;
+            //deactivate existing active 'section'
+            document.querySelector(".section.active").classList.add("hide");
+            document.querySelector(".section.active").classList.remove("active");
+            //activate new 'section'
+            document.querySelector(hash).classList.add("active");
+            document.querySelector(hash).classList.remove("hide");
+            /* deactivate existing active nav menu link */
+            navMenu.querySelector(".active").classList.add("outer-shadow", "hover-in-shadow");
+            navMenu.querySelector(".active").classList.remove("active", "inner-shadow");
+            /* activate new navigation menu link */
+            event.target.classList.add("active", "inner-shadow");
+            event.target.classList.remove("outer-shadow", "hover-in-shadow");
+            //hide navigation menu
+            hideNavMenu();
+       }
+   } 
+})
+
+
+
+
 /* portfolio */
 const filterContainer = document.querySelector(".portfolio__filter"),
 portfolioItemsContainer = document.querySelector(".portfolio__list"),
