@@ -50,13 +50,6 @@ img {
   100% {
     transform: rotate(360deg); } }
 
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0); }
-  50% {
-    transform: translateY(25px); } }
-
 @keyframes bounceLeft {
   0%,
   100% {
@@ -133,6 +126,11 @@ span {
     margin-right: 50px; }
   .btn--margin-top-small {
     margin-top: 15px; }
+  @media only screen and (max-width: 480px) {
+    .btn-about {
+      text-align: center;
+      margin-right: 0;
+      display: block; } }
 
 .effect__wrap .effect--position {
   position: absolute;
@@ -150,39 +148,6 @@ span {
       left: 9%;
       bottom: 47%;
       right: none; } }
-
-.effect-2 {
-  left: 3%;
-  bottom: 20%;
-  width: 40px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  animation: bounce 3s ease-in-out infinite; }
-  .effect-2 div {
-    height: 3px;
-    width: 3px;
-    background-color: #f64668;
-    margin: 0 3px 8px; }
-  @media only screen and (max-width: 480px) {
-    .effect-2 {
-      display: none; } }
-
-.effect-3 {
-  height: 180px;
-  width: 180px;
-  border: 25px solid #984063;
-  border-radius: 50%;
-  left: 50%;
-  top: -120px;
-  animation: bounceLeft 4.5s ease infinite; }
-  @media only screen and (max-width: 480px) {
-    .effect-3 {
-      margin-left: -60px;
-      border: 20px solid #41436a;
-      height: 120px;
-      width: 120px;
-      top: -70px; } }
 
 .effect-4 {
   border-top: 30px solid transparent;
@@ -206,7 +171,9 @@ span {
 .effect-5 {
   border-top: 50px solid transparent;
   border-left: 50px solid #fe9677;
-  animation: spin 25s linear infinite; }
+  animation: spin 25s linear infinite;
+  right: 59%;
+  bottom: 20%; }
   @media only screen and (max-width: 480px) {
     .effect-5 {
       right: 3%;
@@ -399,6 +366,9 @@ span {
     max-width: 100%;
     text-align: center;
     margin-bottom: 60px; }
+    @media only screen and (max-width: 480px) {
+      .about__title {
+        margin-bottom: 20px; } }
   .about h2 {
     display: inline-block;
     font-size: 30px;
@@ -416,6 +386,12 @@ span {
     flex: 0 0 40%;
     max-width: 40%;
     padding: 0 1px; }
+    @media only screen and (max-width: 480px) {
+      .about__img {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-bottom: 30px;
+        display: none; } }
   .about__img-box {
     padding: 15px; }
   .about__info-text {
@@ -429,6 +405,11 @@ span {
       color: #666; }
     .about__info-text span {
       font-weight: 600; }
+    @media only screen and (max-width: 480px) {
+      .about__info-text {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center; } }
   .about img {
     width: 100%;
     border: 10px solid transparent; }
@@ -450,11 +431,17 @@ span {
       border-radius: 30%; }
     .about__social-links:hover {
       color: #984063; }
+  @media only screen and (max-width: 480px) {
+    .about {
+      margin-top: 20px; } }
 
 .portfolio {
   padding: 80px 0 80px;
   min-height: 100vh;
   position: relative; }
+  @media only screen and (max-width: 480px) {
+    .portfolio {
+      padding: 0; } }
   .portfolio__title {
     margin-bottom: 20px; }
   .portfolio__filter {
@@ -485,6 +472,10 @@ span {
     padding: 15px;
     display: flex;
     flex-wrap: wrap; }
+    @media only screen and (max-width: 480px) {
+      .portfolio__item {
+        flex: 0 0 100%;
+        max-width: 100%; } }
     .portfolio__item-details {
       display: none; }
     .portfolio__item-inner {

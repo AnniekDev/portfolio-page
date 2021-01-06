@@ -3,6 +3,10 @@
   min-height: 100vh;
   position: relative;
 
+  @include breakpoint(phone) {
+    padding: 0;
+  }
+
   &__title {
     margin-bottom: 20px;
   }
@@ -43,6 +47,11 @@
     padding: 15px;
     display: flex;
     flex-wrap: wrap;
+
+    @include breakpoint(phone) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
 
     &-details {
       display: none;

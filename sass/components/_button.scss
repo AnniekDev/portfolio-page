@@ -22,4 +22,12 @@
   &--margin-top-small {
     margin-top: 15px;
   }
+
+  &-about {
+    @include breakpoint(phone) {
+      text-align: center;
+      margin-right: 0;
+      display: block;
+    }
+  }
 }
