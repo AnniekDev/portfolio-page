@@ -9,7 +9,13 @@
   border: 4px solid #41436a;
   right: 10%;
   bottom: 10%;
-  animation: spin 10s linear infinite;
+  animation: spin 15s linear infinite;
+
+  @include breakpoint(phone) {
+    left: 9%;
+    bottom: 47%;
+    right: none;
+  }
 }
 
 .effect-2 {
@@ -27,6 +33,10 @@
     background-color: #f64668;
     margin: 0 3px 8px;
   }
+
+  @include breakpoint(phone) {
+    display: none;
+  }
 }
 
 .effect-3 {
@@ -36,7 +46,15 @@
   border-radius: 50%;
   left: 50%;
   top: -120px;
-  animation: bounceLeft 3s ease infinite;
+  animation: bounceLeft 4.5s ease infinite;
+
+  @include breakpoint(phone) {
+    margin-left: -60px;
+    border: 20px solid $color-primary-dark;
+    height: 120px;
+    width: 120px;
+    top: -70px;
+  }
 }
 
 .effect-4 {
@@ -45,6 +63,11 @@
   left: 30%;
   top: 20%;
   animation: spin 15s linear infinite;
+
+  @include breakpoint(phone) {
+    left: 14%;
+    top: 12%;
+  }
 
   &:before {
     content: "";
@@ -58,18 +81,22 @@
 }
 
 .effect-5 {
-  height: 50px;
-  width: 50px;
-  right: 10%;
-  top: 30%;
-  display: flex;
-  justify-content: space-between;
-  border-radius: 50%;
-  overflow: hidden;
-  animation: spin 20s linear infinite;
+  border-top: 50px solid transparent;
+  border-left: 50px solid $color-secondary-light;
+  animation: spin 25s linear infinite;
 
-  div {
-    width: 1px;
-    background-color: #fe9677;
+  @include breakpoint(phone) {
+    right: 3%;
+    bottom: 8%;
+  }
+
+  &:before {
+    content: "";
+    border-top: 42px solid transparent;
+    border-left: 52px solid #fe9677;
+    left: -58px;
+    top: -34px;
+    opacity: 0.5;
+    position: absolute;
   }
 }

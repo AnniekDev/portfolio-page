@@ -9,18 +9,6 @@
   font-family: "Nunito", sans-serif;
   font-weight: 400; }
 
-/* override variables for dark them */
-body.dark {
-  background-color: #fff;
-  background-color: #353535;
-  background-color: #2b2c2f;
-  color: #fff;
-  color: #fff;
-  color: #bbb;
-  box-shadow: 3px 3px 3px #222327, -3px -3px 3px #363636;
-  box-shadow: 0 0 0 #222327, 0 0 0 #363636;
-  box-shadow: inset 3px 3px 3px #222327, inset -3px -3px 3px #363636; }
-
 body {
   font-size: 16px;
   line-height: 1.5;
@@ -156,7 +144,12 @@ span {
   border: 4px solid #41436a;
   right: 10%;
   bottom: 10%;
-  animation: spin 10s linear infinite; }
+  animation: spin 15s linear infinite; }
+  @media only screen and (max-width: 480px) {
+    .effect-1 {
+      left: 9%;
+      bottom: 47%;
+      right: none; } }
 
 .effect-2 {
   left: 3%;
@@ -171,6 +164,9 @@ span {
     width: 3px;
     background-color: #f64668;
     margin: 0 3px 8px; }
+  @media only screen and (max-width: 480px) {
+    .effect-2 {
+      display: none; } }
 
 .effect-3 {
   height: 180px;
@@ -179,7 +175,14 @@ span {
   border-radius: 50%;
   left: 50%;
   top: -120px;
-  animation: bounceLeft 3s ease infinite; }
+  animation: bounceLeft 4.5s ease infinite; }
+  @media only screen and (max-width: 480px) {
+    .effect-3 {
+      margin-left: -60px;
+      border: 20px solid #41436a;
+      height: 120px;
+      width: 120px;
+      top: -70px; } }
 
 .effect-4 {
   border-top: 30px solid transparent;
@@ -187,6 +190,10 @@ span {
   left: 30%;
   top: 20%;
   animation: spin 15s linear infinite; }
+  @media only screen and (max-width: 480px) {
+    .effect-4 {
+      left: 14%;
+      top: 12%; } }
   .effect-4:before {
     content: "";
     border-top: 30px solid transparent;
@@ -197,18 +204,21 @@ span {
     position: absolute; }
 
 .effect-5 {
-  height: 50px;
-  width: 50px;
-  right: 10%;
-  top: 30%;
-  display: flex;
-  justify-content: space-between;
-  border-radius: 50%;
-  overflow: hidden;
-  animation: spin 20s linear infinite; }
-  .effect-5 div {
-    width: 1px;
-    background-color: #fe9677; }
+  border-top: 50px solid transparent;
+  border-left: 50px solid #fe9677;
+  animation: spin 25s linear infinite; }
+  @media only screen and (max-width: 480px) {
+    .effect-5 {
+      right: 3%;
+      bottom: 8%; } }
+  .effect-5:before {
+    content: "";
+    border-top: 42px solid transparent;
+    border-left: 52px solid #fe9677;
+    left: -58px;
+    top: -34px;
+    opacity: 0.5;
+    position: absolute; }
 
 .header {
   padding: 20px 15px;
@@ -263,6 +273,9 @@ span {
   .home__full-screen {
     padding: 50px 0;
     min-height: 100vh; }
+    @media only screen and (max-width: 480px) {
+      .home__full-screen {
+        padding: 100px 0; } }
   .home__intro-text h1 {
     font-size: 20px;
     font-weight: 600;
@@ -280,6 +293,9 @@ span {
     font-size: 20px;
     text-transform: capitalize;
     margin: 0; }
+  @media only screen and (max-width: 480px) {
+    .home__intro-text {
+      text-align: center; } }
   .home__img-box {
     max-width: 450px;
     display: block;
@@ -290,10 +306,19 @@ span {
       width: 100%;
       border-radius: 50%;
       border: 10px solid transparent; }
+    @media only screen and (max-width: 480px) {
+      .home__img-box {
+        order: 2;
+        margin-top: 40px;
+        max-width: 234px; } }
   .home__intro-text, .home__img {
     flex: 0 0 50%;
     max-width: 50%;
     padding: 0 15px; }
+    @media only screen and (max-width: 480px) {
+      .home__intro-text, .home__img {
+        flex: 0 0 100%;
+        max-width: 100%; } }
 
 .navigation {
   position: fixed;
