@@ -73,8 +73,12 @@
         margin: 10px auto;
         display: block;
         max-width: 50%;
-        font-weight: 600;
+        font-weight: 700;
         border: 0;
+
+        @include breakpoint(phone) {
+          max-width: 100%;
+        }
       }
     }
 
@@ -195,11 +199,22 @@
     max-width: 65%;
     padding: 0 15px;
 
+    @include breakpoint(phone) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
     p {
       font-size: 16px;
       color: $color-text-black-600;
       line-height: 26px;
       margin: 0;
+
+      @include breakpoint(phone) {
+        margin-top: 10px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+      }
     }
   }
 
@@ -207,6 +222,17 @@
     flex: 0 0 35%;
     max-width: 35%;
     padding: 0 15px;
+
+    @include breakpoint(phone) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    h3 {
+      @include breakpoint(phone) {
+        margin-top: 10px;
+      }
+    }
 
     ul li {
       display: block;
@@ -217,6 +243,9 @@
 
       a {
         color: $color-primary;
+        @include breakpoint(phone) {
+          font-size: 14px;
+        }
       }
     }
     li:last-child {
