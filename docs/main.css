@@ -52,6 +52,11 @@ img {
   max-width: 100%;
 }
 
+span {
+  font-weight: bold;
+  color: #000;
+}
+
 .container {
   max-width: 1140px;
   margin: auto;
@@ -1150,7 +1155,6 @@ span {
 .contact {
   position: relative;
   height: 100vh;
-  padding: 80px;
 }
 
 @media only screen and (max-width: 480px) {
@@ -1169,7 +1173,7 @@ span {
           flex: 0 0 100%;
   max-width: 100%;
   text-align: center;
-  margin-bottom: 0;
+  margin: 20px 0;
 }
 
 @media only screen and (max-width: 480px) {
@@ -1295,6 +1299,6 @@ span {
 }
 
 .contact.section {
-  padding: 25px;
+  padding: 48px 25px 25px 25px;
 }
 /*# sourceMappingURL=main.css.map */

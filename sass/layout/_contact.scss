@@ -1,7 +1,6 @@
 .contact {
   position: relative;
   height: 100vh;
-  padding: 80px;
 
   @include breakpoint(phone) {
     flex: 0 0 100%;
@@ -13,7 +12,7 @@
     flex: 0 0 100%;
     max-width: 100%;
     text-align: center;
-    margin-bottom: 0;
+    margin: 20px 0;
 
     @include breakpoint(phone) {
       margin: 20px 0 20px 0;
@@ -116,6 +115,6 @@
   }
 
   &.section {
-    padding: 25px;
+    padding: 48px 25px 25px 25px;
   }
 }
